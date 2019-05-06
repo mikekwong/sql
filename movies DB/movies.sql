@@ -57,4 +57,8 @@ CREATE TABLE movies_actors (
 SELECT
   *
 FROM
-  movies_actors
+  movies_actors;
+
+ALTER TABLE movies
+  ADD COLUMN movie_lang VARCHAR(30);
+
