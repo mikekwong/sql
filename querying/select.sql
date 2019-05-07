@@ -242,3 +242,80 @@ FROM
 WHERE
   first_name LIKE '%rl%';
 
+-- selecting data where a column is between 2 values
+-- not recommended for strings but for integers and date cols
+
+/*
+SELECT columnname1, columnname2 FROM tablename
+WHERE columnname3 BETWEEN value1 AND value2;
+ */
+SELECT
+  *
+FROM
+  movies;
+
+SELECT
+  movie_name,
+  release_date
+FROM
+  movies
+WHERE
+  release_date BETWEEN '1995-01-01'
+  AND '1999-12-31';
+
+SELECT
+  movie_name,
+  movie_length
+FROM
+  movies
+WHERE
+  movie_length BETWEEN 90 AND 120;
+
+SELECT
+  movie_name,
+  movie_lang
+FROM
+  movies
+WHERE
+  movie_lang BETWEEN 'E'
+  AND 'P';
+
+SELECT
+  movie_name,
+  movie_lang
+FROM
+  movies
+WHERE
+  movie_lang BETWEEN 'E'
+  AND 'Portuguese';
+
+-- challenge
+
+SELECT
+  movie_name,
+  movie_lang
+FROM
+  movies
+WHERE
+  movie_lang IN ('English', 'Spanish', 'Korean');
+
+SELECT
+  first_name,
+  last_name
+FROM
+  actors
+WHERE
+  last_name LIKE 'M%'
+  AND date_of_birth BETWEEN '1940-01-01'
+  AND '1969-12-31';
+
+SELECT
+  first_name,
+  last_name
+FROM
+  directors
+WHERE
+  nationality IN ('British', 'French', 'German')
+  AND date_of_birth BETWEEN '1950-01-01'
+  AND '1980-12-31';
+
