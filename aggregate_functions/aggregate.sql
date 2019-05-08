@@ -50,3 +50,97 @@ WHERE
 SELECT MAX(columnname) FROM tablename;
 SELECT MIN(columnname) FROM tablename;
  */
+SELECT
+  MAX(movie_length)
+FROM
+  movies;
+
+SELECT
+  MAX(movie_length)
+FROM
+  movies;
+
+SELECT
+  MAX(movie_length)
+FROM
+  movies
+WHERE
+  movie_lang = 'Japanese';
+
+SELECT
+  MAX(release_date)
+FROM
+  movies;
+
+SELECT
+  MIN(release_date)
+FROM
+  movies;
+
+-- MAX alphabetically returns the reverse chronological order
+
+SELECT
+  MAX(movie_name)
+FROM
+  movies;
+
+-- MIN alphabetically returns the chronological order
+
+SELECT
+  MIN(movie_name)
+FROM
+  movies;
+
+-- Aggregate Function: AVG
+
+/*
+SELECT AVG(columnname) FROM tablename;
+ */
+SELECT
+  AVG(movie_length)
+FROM
+  movies;
+
+SELECT
+  AVG(movie_length)
+FROM
+  movies
+WHERE
+  age_certificate = '18';
+
+-- Aggregate challenge
+
+SELECT
+  COUNT(*)
+FROM
+  actors
+WHERE
+  date_of_birth > '1970-01-01';
+
+SELECT
+  MAX(domestic_takings),
+  MIN(domestic_takings)
+FROM
+  movie_revenues;
+
+SELECT
+  SUM(movie_length)
+FROM
+  movies
+WHERE
+  age_certificate = '15';
+
+SELECT
+  COUNT(*)
+FROM
+  directors
+WHERE
+  nationality = 'Japanese';
+
+SELECT
+  AVG(movie_length)
+FROM
+  movies
+WHERE
+  movie_lang = 'Chinese';
+
